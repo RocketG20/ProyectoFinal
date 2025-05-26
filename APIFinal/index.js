@@ -1,20 +1,20 @@
 require('dotenv').config();
 const express = require('express');
-const xmlparser = require('express-xml-bodyparser');
-const routerZodiaco = require('./router/zodiacoRouter');
+const routerFiguras = require('./router/figurasRouter');
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsdoc = require('swagger-jsdoc');
 
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Configuración de Swagger
 const swaggerOptions = {
     definition: {
         openapi: "3.0.0",
         info: {
-            title: "API de Signos Zodiacales",
+            title: "API de Figuras Coleccionables",
             version: "1.0.0",
-            description: "Documentación de la API de signos zodiacales"
+            description: "Documentación de la API de figuras coleccionables"
         },
         servers: [
             {
@@ -22,7 +22,7 @@ const swaggerOptions = {
             }
         ]
     },
-    apis: ["./router/zodiacoRouter.js"]
+    apis: ["./router/figurasRouter.js"]
 };
 
 const swaggerSpecs = swaggerJsdoc(swaggerOptions);
@@ -30,14 +30,12 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 
 // Middlewares
 app.use(express.json());
-app.use(express.text());
-app.use(xmlparser());
 
 // Rutas
-app.use('/zodiaco', routerZodiaco);
+app.use('/figuras', routerFiguras);
 
 app.get('/', (req, res) => {
-    res.send("¡Bienvenido a la API de signos zodiacales!");
+    res.send("¡Bienvenido a la API de figuras coleccionables!");
 });
 
 // Manejo de errores
