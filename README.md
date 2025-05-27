@@ -1,24 +1,37 @@
-# Proyecto Zodiaco
+Proyecto Figuras Coleccionables
 
-Este proyecto recibe una fecha como entrada y devuelve el signo zodiacal correspondiente.
+Este proyecto permite **gestionar figuras coleccionables** mediante una API, ofreciendo operaciones como **agregar, buscar, actualizar y eliminar figuras**.  
 
-## Características
+## **Características**  
+- **Agregar** nuevas figuras.  
+- **Buscar** figuras por ID.  
+- **Listar** todas las figuras disponibles.  
+- **Actualizar** información de una figura.  
+- **Eliminar** figuras del sistema.  
 
-- Introduce una fecha.
-- Obtén el signo zodiacal asociado.
+## **Uso**  
 
-## Uso
+1️⃣ **Enviar solicitudes a la API** con los endpoints definidos.  
+2️⃣ **La API responde con la información de las figuras** según la operación.  
 
-1. Ingresa la fecha en el formato solicitado.
-2. El sistema responde con el signo zodiacal.
+### **Ejemplo de solicitud y respuesta**  
 
-## Ejemplo
+📌 **Agregar una figura**  
+```json
+POST /api/figuras  
+{
+  "nombre": "Darth Vader",
+  "categoria": "Star Wars",
+  "precio": 45.99
+}
+Respuesta
+{
+  "id": 1,
+  "nombre": "Darth Vader",
+  "categoria": "Star Wars",
+  "precio": 45.99
+}
 
-```
-Entrada: 2002-08-19
-Salida: Leo
-```
 
-## Autor
-
+Autor
 - 20100184_Guillermo Del Bosque G.
