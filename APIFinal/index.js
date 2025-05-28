@@ -39,7 +39,7 @@ const swaggerOptions = {
                 - 500: Error del servidor
             `,
             contact: {
-                name: "Soporte API",
+                name: "Soporte de la API",
                 email: "soporte@tudominio.com"
             }
         },
