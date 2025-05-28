@@ -14,16 +14,59 @@ const swaggerOptions = {
         info: {
             title: "API de Figuras Coleccionables",
             version: "1.0.0",
-            description: "Documentación de la API de figuras coleccionables"
+            description: `
+                ## Descripción General
+                Esta API permite gestionar un catálogo de figuras coleccionables, incluyendo operaciones CRUD completas.
+
+                ## Uso Básico
+                - **GET /figuras**: Obtener todas las figuras
+                - **GET /figuras/{id}**: Obtener una figura específica
+                - **POST /figuras**: Agregar una nueva figura
+                - **PUT /figuras/{id}**: Actualizar una figura existente
+                - **DELETE /figuras/{id}**: Eliminar una figura
+
+                ## Autenticación
+                Actualmente la API no requiere autenticación.
+
+                ## Ejemplos
+                Puedes probar los endpoints directamente desde esta interfaz.
+
+                ## Códigos de Estado
+                - 200: OK
+                - 201: Creado
+                - 400: Solicitud incorrecta
+                - 404: No encontrado
+                - 500: Error del servidor
+            `,
+            contact: {
+                name: "Soporte API",
+                email: "soporte@tudominio.com"
+            },
+            license: {
+                name: "MIT",
+                url: "https://opensource.org/licenses/MIT"
+            }
         },
         servers: [
             {
-                url: "https://proyectofinal-production-b4e7.up.railway.app/"
+                url: "https://proyectofinal-production-b4e7.up.railway.app/",
+                description: "Servidor de producción"
             },
             {
-                url: `http://localhost:${port}`
+                url: `http://localhost:${port}`,
+                description: "Servidor local de desarrollo"
             }
-        ]
+        ],
+        tags: [
+            {
+                name: "Figuras",
+                description: "Operaciones relacionadas con figuras coleccionables"
+            }
+        ],
+        externalDocs: {
+            description: "Documentación adicional",
+            url: "https://github.com/turepositorio/README.md"
+        }
     },
     apis: ["./router/figurasRouter.js"]
 };
