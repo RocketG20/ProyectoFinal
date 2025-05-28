@@ -41,10 +41,6 @@ const swaggerOptions = {
             contact: {
                 name: "Soporte API",
                 email: "soporte@tudominio.com"
-            },
-            license: {
-                name: "MIT",
-                url: "https://opensource.org/licenses/MIT"
             }
         },
         servers: [
@@ -65,7 +61,7 @@ const swaggerOptions = {
         ],
         externalDocs: {
             description: "Documentación adicional",
-            url: "https://github.com/turepositorio/README.md"
+            url: "https://github.com/RocketG20/ProyectoFinal/blob/main/README.md"
         }
     },
     apis: ["./router/figurasRouter.js"]
