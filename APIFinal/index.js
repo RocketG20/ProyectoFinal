@@ -18,6 +18,9 @@ const swaggerOptions = {
         },
         servers: [
             {
+                url: "https://proyectofinal-production-b4e7.up.railway.app/"
+            },
+            {
                 url: `http://localhost:${port}`
             }
         ]

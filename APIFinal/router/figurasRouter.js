@@ -4,8 +4,17 @@ const { obtenerFiguras, obtenerFiguraPorId, agregarFigura, actualizarFigura, eli
 
 /**
  * @swagger
+ * tags:
+ *   - name: Figuras
+ *     description: Operaciones relacionadas con figuras coleccionables
+ */
+
+/**
+ * @swagger
  * /figuras:
  *   get:
+ *     tags:
+ *       - Figuras
  *     summary: Obtiene todas las figuras coleccionables
  *     description: Devuelve un listado de figuras coleccionables almacenadas en la base de datos.
  *     responses:
@@ -34,13 +43,14 @@ const { obtenerFiguras, obtenerFiguraPorId, agregarFigura, actualizarFigura, eli
  *                     type: string
  *                     description: Estado de conservación de la figura
  */
-
 router.get('/', obtenerFiguras);
 
 /**
  * @swagger
  * /figuras/{id}:
  *   get:
+ *     tags:
+ *       - Figuras
  *     summary: Obtiene una figura por su ID
  *     description: Busca y devuelve los detalles de una figura específica según su ID.
  *     parameters:
@@ -56,13 +66,14 @@ router.get('/', obtenerFiguras);
  *       404:
  *         description: Figura no encontrada.
  */
-
 router.get('/:id', obtenerFiguraPorId);
 
 /**
  * @swagger
  * /figuras:
  *   post:
+ *     tags:
+ *       - Figuras
  *     summary: Agrega una nueva figura
  *     description: Inserta una nueva figura coleccionable en la base de datos.
  *     requestBody:
@@ -86,13 +97,14 @@ router.get('/:id', obtenerFiguraPorId);
  *       400:
  *         description: Datos incorrectos o faltantes.
  */
-
 router.post('/', agregarFigura);
 
 /**
  * @swagger
  * /figuras/{id}:
  *   put:
+ *     tags:
+ *       - Figuras
  *     summary: Actualiza una figura
  *     description: Modifica la información de una figura existente según su ID.
  *     parameters:
@@ -122,13 +134,14 @@ router.post('/', agregarFigura);
  *       404:
  *         description: Figura no encontrada.
  */
-
 router.put('/:id', actualizarFigura);
 
 /**
  * @swagger
  * /figuras/{id}:
  *   delete:
+ *     tags:
+ *       - Figuras
  *     summary: Elimina una figura
  *     description: Borra una figura de la base de datos según su ID.
  *     parameters:
@@ -143,7 +156,6 @@ router.put('/:id', actualizarFigura);
  *       404:
  *         description: Figura no encontrada.
  */
-
 router.delete('/:id', eliminarFigura);
 
 module.exports = router;
