@@ -20,16 +20,18 @@ Este proyecto permite **gestionar figuras coleccionables** mediante una API, ofr
 ```json
 POST /api/figuras  
 {
-  "nombre": "Darth Vader",
-  "categoria": "Star Wars",
-  "precio": 45.99
+  "nombre": "Darth vader",
+  "franquicia": "star wars",
+  "año_lanzamiento": 2001,
+  "estado": "nuevo"
 }
 Respuesta
 {
   "id": 1,
   "nombre": "Darth Vader",
-  "categoria": "Star Wars",
-  "precio": 45.99
+  "franquicia": "Star Wars",
+  "año_lanzamiento": 2001.
+  "estado": "nuevo"
 }
 
 
