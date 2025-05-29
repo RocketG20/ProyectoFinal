@@ -49,15 +49,15 @@ function obtenerFiguraPorId(req, res) {
 }
 
 function agregarFigura(req, res) {
-    const { nombre, franquicia, año_lanzamiento, estado } = req.body;
+    const { nombre, franquicia, año_lanzamiento: anio_lanzamiento, estado } = req.body;
     
-    if (!nombre || !franquicia || !año_lanzamiento || !estado) {
+    if (!nombre || !franquicia || !anio_lanzamiento || !estado) {
         return res.status(400).json({ error: "Todos los campos son requeridos." });
     }
 
     const consulta = `INSERT INTO figuras (nombre, franquicia, año_lanzamiento, estado) VALUES (?, ?, ?, ?)`;
 
-    connection.query(consulta, [nombre, franquicia, año_lanzamiento, estado], (error, results) => {
+    connection.query(consulta, [nombre, franquicia, anio_lanzamiento, estado], (error, results) => {
         if (error) {
             console.error("Error en la consulta:", error);
             return res.status(500).json({ error: "Error al agregar la figura." });
