@@ -16,7 +16,7 @@ Este proyecto permite **gestionar figuras coleccionables** mediante una API, ofr
 
 ### **Ejemplo de solicitud y respuesta**  
 
-📌 **Agregar una figura**  
+📌 **Agregar una figura.**  
 ```json
 POST /api/figuras  
 {
