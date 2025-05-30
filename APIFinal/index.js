@@ -77,7 +77,7 @@ app.use(express.json());
 app.use('/figuras', routerFiguras);
 
 app.get('/', (req, res) => {
-    res.send("¡Bienvenido a la API de figuras coleccionables!");
+    res.send("¡Bienvenido a la API de figuras coleccionables!!");
 });
 
 // Manejo de errores

@@ -2,7 +2,7 @@ Proyecto Figuras Coleccionables
 
 Este proyecto permite **gestionar figuras coleccionables** mediante una API, ofreciendo operaciones como **agregar, buscar, actualizar y eliminar figuras**.  
 
-## **Características**  
+## **Características.**  
 - **Agregar** nuevas figuras.  
 - **Buscar** figuras por ID.  
 - **Listar** todas las figuras disponibles.  
